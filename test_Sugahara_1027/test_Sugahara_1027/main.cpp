@@ -99,15 +99,15 @@ private:
 
 };
 
-class Car : public Vehicle
+class Bicycle : public Vehicle
 {
 public:
-	Car() 
+	Bicycle()
 	{
-		speed = 3;
-		accel = 3;
+		speed = 2;
+		accel = 2;
 	};
-	virtual~Car() { printf("\n~car\n"); };
+	virtual~Bicycle() { printf("\n~Bicycle\n"); };
 
 	void SpeedUp()
 	{
@@ -126,9 +126,12 @@ private:
 
 };
 
+
+
 int main()
 {
 	Car car;
+	Bicycle bicycle;
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -136,4 +139,11 @@ int main()
 		car.Update();
 	}
 
+	printf("\n\n\n");
+
+	for (int i = 0; i < 10; i++)
+	{
+		bicycle.SpeedUp();
+		bicycle.Update();
+	}
 };
