@@ -65,6 +65,12 @@ public:
 		printf("new speed = %d\n", speed);
 	}
 
+	void Update()
+	{
+		x += speed;
+		printf("x=%d \ny=%d \nz=%d\n", x, y, z);
+	};
+
 	int speed = 1;
 	int	accel = 1;
 
@@ -82,19 +88,6 @@ public:
 	};
 	virtual~Car() { printf("\n~car\n"); };
 
-	void SpeedUp()
-	{
-		printf("speed:%d += accel:%d\n", speed, accel);
-		speed += accel;
-		printf("new speed = %d\n", speed);
-	};
-
-	void Update()
-	{
-		x += speed;
-		printf("x=%d \ny=%d \nz=%d\n", x, y, z);
-	};
-	
 private:
 
 };
@@ -109,19 +102,6 @@ public:
 	};
 	virtual~Bicycle() { printf("\n~Bicycle\n"); };
 
-	void SpeedUp()
-	{
-		printf("speed:%d += accel:%d\n", speed, accel);
-		speed += accel;
-		printf("new speed = %d\n", speed);
-	};
-
-	void Update()
-	{
-		x += speed;
-		printf("x=%d \ny=%d \nz=%d\n", x, y, z);
-	};
-	
 private:
 
 };
