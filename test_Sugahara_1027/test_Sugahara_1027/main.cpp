@@ -32,7 +32,12 @@ bicycle(自転車)やbike(オートバイ)
 Carをさらに継承したpolice carや、truckなどの
 クラスを作成してみてください。
 */
+
 #include <stdio.h>
+
+#include <iostream>
+#include <vector>
+
 
 class Object
 {
@@ -88,6 +93,11 @@ public:
 	};
 	virtual~Car() { printf("\n~car\n"); };
 
+	void Update()
+	{
+		Vehicle::Update();
+	}
+
 private:
 
 };
@@ -101,6 +111,11 @@ public:
 		accel = 2;
 	};
 	virtual~Bicycle() { printf("\n~Bicycle\n"); };
+
+	void Update()
+	{
+		Vehicle::Update();
+	}
 
 private:
 
@@ -127,3 +142,5 @@ int main()
 		bicycle.Update();
 	}
 };
+
+
